@@ -1,0 +1,148 @@
+Utilizaremos: Lenguaje de programacion Javascript
+
+Sintaxis(palabras reservadas) y semantica (el significado lo que quiero decir o expresar cuando hago uso de las palabras reservadas)
+motor / interpetre NODEJS 
+navegadores utilizan su propio motor para interpretar javascript V8 en google chrome.
+
+Se tomaran 2 parciales presenciales en formato papel.
+
+la semana que viene hay paro toda la semana.
+
+habra alguna clase virtual , cuando se requiera explicar un tema en profundidad , ver grabaciones
+
+canal de comunicacion whatsap
+
+javascript considera objeto : 
+
+cont var = {key1: Valor1 , key2: Valor2 ,....., keyn:Valorn} 
+var -> #FFFFFFF   no se puede modificar cuando se reserva el nombre de objeto , pero se pueden cambiar los pares clave valor internos (metodos y atributos)
+Este objeto clave valor separado por comas, voy a guardar el valor de este objeto en un constante.
+var.key2 = 6
+
+Cuando definimos un array como constante por ejemplo:
+
+const A = []
+A.push(1)
+
+let ( palabra reservada para utilizar variables)
+const (palabra reservada para utilizar constante)
+
+los objetos son estructuras anidadas puede tener como valor de alguna clave cualquier tipo : number, string, array, objeto.
+
+const p1 = {nombre: 'pablo' , edad: 17, residencia:{calle:'alem' ,numero: 3200, localidad: 'jcp', provincia: 'bsas' }, esMayor: function(value){return value >=18}}
+
+objeto p1  que tiene claves ( nombre, edad, residencia,esMayor)
+
+para acceder a los valores de los atributos de mi objeto p1 de las siguientes formas:
+
+let attr = "edad"   // generacion de una variable temporal modifcamos y se la pasamos al objeto dentro de los [] para cambiarle el valor al atributo.
+p1.edad = 18
+p1[attr] = 18
+
+asi se genera un array y puede contener diferentes tipos de elementos. estructuras que tienen posiciones
+const a [p1, {},{}]
+al array puede devolver la cantidad de posiciones que tiene cuanto mide 
+
+a.lenght -->  (3)
+a.push("hola")
+objeto vacio es valido crearlo no hay restricciones para generarlos de esta forma. 
+let o = {}
+
+
+vamos a definir una constante:
+
+const al1 = {nombre: 'martin', aprobadas : 21 ,tieneIngles: true}
+const al2 = {nombre: 'ludmila', aprobadas : 18 ,tieneIngles: true}
+const al3 = {nombre: 'carolina', aprobadas : 19 ,tieneIngles: false}
+
+const alumnos [al1,al3,al2]             EXTENSION
+               0    1   2
+alumnos.lenght => 3
+
+alumnos[1]["aprobadas"] = 20   // esta linea cambio al3 ( carolina su clave aprobadas = 20 )
+
+alumnos.push({nombre: 'pablo', aprobadas : 22 ,tieneIngles: true})
+alumnos.lenght => 4  
+
+repasamos filtros vistos en paradigmas de objetos.
+alumnos.
+
+declarativo o procedimental
+un parametro en plural dentro de una funcion nos da la pauta de que hablamos de un array
+
+ej procedimental:
+no preguntar nunca si una variable es verdadera o falsa siempre ya la consulta por la misma variable da un resultado dependiendo su valor .
+
+function filtro (valves){
+    const result = []
+    for(let i=0; i<valves.lenght ; i++){
+        if(valves[i].aprobadas>=20 && valves[i].tieneIngles){
+            result.push(valves[i])
+        }
+    }
+    return result
+}
+
+ej arrow functions ->    (ejemplo de funcion declarativa , la parte de recorrer el array ya esta echa a diferencia de la procedimental)
+
+const falu =(valve) => {
+    return valve.aprobadas >=20 && valve.tieneIngles //  esto es una EXPRESION dado que devuelve un resultado cada vez que se consulta en este caso una expresion boleana.
+}
+
+
+3 + 4 => 7  (esto tambien seria una EXPRESION) 
+
+
+Por lo tanto podemos resumir aun mas el codigo de la funcion flecha(Function arrow) tiene la siguiente forma:{nombre: 'martin', aprobadas : 21 ,tieneIngles: true
+
+cons falu = (valve) => valve.aprobadas>=20 && valve.tieneIngles  // momento de la definicion
+
+falu({aprobadas:20, tieneIngles:true})  // momento de ejecucion llamada de la funcion
+            valve
+
+
+vamos a llevar estos conceptos al mundo de los arrays : 
+
+alumnos.filter(falu)  //alumno.filter esta parte hace el bucle la logica del recorrido del array  , (falu) esta parte invoca la llamada a la funcion.
+
+// el metodo filter hace la iteracion ya esta echo y en cada iteracion llama a la funcion que da la condicion a filtrar.
+
+falu(a1)
+falu(a2)
+falu(a3)
+
+estamos ahorra lineas de codigo gracias a este tipo de funciones declarativas que tienen metodos que simplifican complejidades de la programacion estructura o procedimental como el primer ejemplo
+
+filter devuelve al final un nuevo conjunto un array diferente que se indico con la linea CONST RESULT = [] no pisa el original.
+
+ejemplo practico :  las referencias de este codigo modifican las originales es muy importante probarlo y darnos cuenta como funciona filter que retorno y que referencias de memoria. 
+
+const a1 = {}
+const a2 = {}
+
+const alumnos = [a1 , a2] 
+const filtrados = alumnos.filter ( 
+    valve => valve.aprobadas >= 20 && valve.tieneIngles
+)
+
+if(filtrados.lenght>0){
+    filtrados[0].aprobadas = 0
+}
+
+nota importante las dos estructuras basicas de programacion en general condicion y repeticion. 
+
+undefined no es lo mismo q  null (explicito igual a null)
+undefined => no esta definido
+investigar para proxima clase metodo FIND 
+
+algoritmo del FIND ejemplo : 
+
+[{},{},{}]
+
+find (valves) {
+
+for(let i = 0; i<valves.lenght; i++)
+if
+
+
+}
